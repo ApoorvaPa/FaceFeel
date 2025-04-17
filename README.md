@@ -1,12 +1,14 @@
 # FaceFeel: Facial Emotion Recognition with MediaPipe and 2D CNN
 FaceFeel is a lightweight facial emotion recognition pipeline that combines facial landmark extraction using MediaPipe with a 2D Convolutional Neural Network (CNN). It supports dataset generation using a webcam or video, training a custom CNN model, and running real-time inference.
-✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨
+
+
 ## Features
 - Data Generation: Capture facial landmarks from webcam or video using MediaPipe and save them with emotion labels in a CSV file.
 - Model Training: Train a 2D CNN model using the generated dataset, with checkpointing for best performance.
 - Real-Time Inference: Detect emotions in real-time using a webcam and the trained CNN model.
 - Model Conversion: Convert .keras models to .h5 format for compatibility.
 - Model Validation: Verify the integrity of converted .h5 models.
+
 
 ## Project Structure
 
