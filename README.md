@@ -1,6 +1,6 @@
 # FaceFeel: Facial Emotion Recognition with MediaPipe and 2D CNN
 FaceFeel is a lightweight facial emotion recognition pipeline that combines facial landmark extraction using MediaPipe with a 2D Convolutional Neural Network (CNN). It supports dataset generation using a webcam or video, training a custom CNN model, and running real-time inference.
-
+✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨ ✨
 ## Features
 - Data Generation: Capture facial landmarks from webcam or video using MediaPipe and save them with emotion labels in a CSV file.
 - Model Training: Train a 2D CNN model using the generated dataset, with checkpointing for best performance.
@@ -69,3 +69,54 @@ python test2dcnn.py
 ```
 - Opens the webcam, extracts facial landmarks, and predicts emotions using the trained model.
 - Displays the predicted emotion in real-time.
+
+### 5. (Optional) Convert .keras Model to .h5
+To convert the .keras model to .h5 format:
+```bash
+python convert.py
+```
+- Edit the script if your model filenames differ from the defaults.
+
+### 6. (Optional) Validate HDF5 Model
+- To verify the integrity of the converted .h5 model:
+```bash
+python checksave.py
+```
+## Emotion Classes
+Update the emotion_labels list in test2dcnn.py to match your dataset:
+```python
+emotion_labels = ['happy', 'neutral', 'sad']
+```
+Ensure the label order is consistent across datagen.py, train2dcnn.py, and test2dcnn.py.
+
+## Dependencies
+Install the required Python packages:
+```bash
+pip install -r requirements.txt
+```
+requirements.txt:
+```plain
+opencv-python
+mediapipe
+numpy
+pandas
+tensorflow
+cvzone
+scikit-learn
+```
+## Troubleshooting
+- Webcam Issues: Ensure your webcam is connected and accessible.
+- MediaPipe Errors: Verify that mediapipe is installed correctly (pip show mediapipe).
+- Model Loading Errors: Ensure the model files (best_model_2dcnn.keras or final_model_2dcnn.keras) exist in the project directory.
+- Dataset Issues: Check that data.csv contains sufficient samples for each emotion class.
+
+#### Author
+Built with ❤️ by Apoorva Parashar
+
+### License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+### Acknowledgments
+- MediaPipe for facial landmark detection
+- TensorFlow for CNN implementation
+- OpenCV for webcam handling
