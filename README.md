@@ -7,7 +7,7 @@ FaceFeel is a lightweight facial emotion recognition pipeline that combines faci
 - Model Training: Train a 2D CNN model using the generated dataset, with checkpointing for best performance.
 - Real-Time Inference: Detect emotions in real-time using a webcam and the trained CNN model.
 - Model Conversion: Convert .keras models to .h5 format for compatibility.
-- Model Validation: Verify the integrity of converted .h5 models.
+- Model Validation: Verify the integrity of converted .h5 models. (we are doing this step to check whether .h5 model is valid and sometimes .keras gives errors when the inference script is run, so then .h5 can be utilised.) 
 
 
 ## Project Structure
